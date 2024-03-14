@@ -15,6 +15,6 @@ jobs:
           node-version: 18.12.1
           cache: npm
       - name: Install
-        run: npm ci
+        run: npm ci --prefer-offline
       - name: Run tests
         run: npm run test:unit

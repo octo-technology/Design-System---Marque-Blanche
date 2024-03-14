@@ -15,7 +15,7 @@ jobs:
           node-version: 18.12.1
           cache: npm
       - name: Install
-        run: npm ci
+        run: npm ci --omit=dev --prefer-offline
       - name: Build
         run: npm run build
       - name: Upload artifact
