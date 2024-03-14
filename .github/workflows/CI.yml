@@ -10,3 +10,6 @@ jobs:
   build:
     needs: [tests, type-check]
     uses: ./.github/workflows/build.yml
+  build-storybook:
+    needs: [tests, type-check]
+    uses: ./.github/workflows/build-storybook.yml

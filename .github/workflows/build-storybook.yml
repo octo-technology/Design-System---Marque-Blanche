@@ -1,0 +1,26 @@
+name: 'Build Storybook'
+
+on: [workflow_call, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          #         TODO: add version to a .nvmrc or at least a variable
+          node-version: 18.12.1
+          cache: npm
+      - name: Install
+        run: npm ci --prefer-offline
+      - name: Build
+        run: npm run storybook:build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-${{ github.sha }}
+          path: ./storybook-static
+          if-no-files-found: error
