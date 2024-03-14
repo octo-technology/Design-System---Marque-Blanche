@@ -14,6 +14,12 @@ jobs:
 #         TODO: add version to a .nvmrc or at least a variable
           node-version: 18.12.1
           cache: npm
+      - name: Cache node modules
+        id: cache-packages
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: ${{ hashFiles('package-lock.json') }}
       - name: Install
         run: npm ci
       - name: Run tests

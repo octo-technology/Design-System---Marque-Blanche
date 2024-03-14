@@ -15,12 +15,14 @@ jobs:
           node-version: 18.12.1
           cache: npm
       - name: Cache node modules
+        id: cache-packages
         uses: actions/cache@v3
         with:
           path: ./node_modules
           key: ${{ hashFiles('package-lock.json') }}
       - name: Install
-        run: npm ci
+        if: ${{ steps.cache-packages.outputs.cache-hit != 'true' }}
+        run: npm ci --omit=dev
       - name: Build
         run: npm run build
       - name: Upload artifact
