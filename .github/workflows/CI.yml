@@ -1,0 +1,12 @@
+name: "CI"
+
+on: [push]
+
+jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
+  type-check:
+    uses: ./.github/workflows/type-check.yml
+  build:
+    needs: [tests, type-check]
+    uses: ./.github/workflows/build.yml
