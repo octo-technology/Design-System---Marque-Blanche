@@ -1,6 +1,21 @@
 name: 'Build'
 
-on: [workflow_call, workflow_dispatch]
+on:
+  workflow_call:
+    inputs:
+      artifact-name:
+        description: name of the artifact to be pushed
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      artifact-name:
+        description: name of the artifact to be pushed
+        required: false
+        type: string
+
+env:
+  ARTIFACT_NAME: ${{ inputs.artifact-name || format('lib-{0}', github.sha) }}
 
 jobs:
   build:
@@ -21,6 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: lib-${{ github.sha }}
+          # TODO (GAFI 19-03-2024): Add variable for this to avoid using ref when not provided
+          name: ${{ env.ARTIFACT_NAME }}
           path: ./dist
           if-no-files-found: error

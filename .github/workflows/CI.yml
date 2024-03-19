@@ -1,6 +1,6 @@
 name: "CI"
 
-on: [push]
+on: [pull_request]
 
 jobs:
   tests:
@@ -10,6 +10,10 @@ jobs:
   build:
     needs: [tests, type-check]
     uses: ./.github/workflows/build.yml
+    with:
+      artifact-name: "lib-${{ github.head_ref }}"
   build-storybook:
     needs: [tests, type-check]
     uses: ./.github/workflows/build-storybook.yml
+    with:
+      artifact-name: "storybook-${{ github.head_ref }}"
