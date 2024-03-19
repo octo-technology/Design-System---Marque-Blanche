@@ -1,6 +1,9 @@
-name: "CI"
+name: "CD"
 
-on: pull_request
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   tests:
@@ -11,9 +14,9 @@ jobs:
     needs: [tests, type-check]
     uses: ./.github/workflows/build.yml
     with:
-      artifact-name: "lib-${{ github.head_ref }}"
+      artifact-name: "lib-latest"
   build-storybook:
     needs: [tests, type-check]
     uses: ./.github/workflows/build-storybook.yml
     with:
-      artifact-name: "storybook-${{ github.head_ref }}"
+      artifact-name: "storybook-latest"
