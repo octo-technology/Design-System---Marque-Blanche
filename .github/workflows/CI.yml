@@ -13,3 +13,5 @@ jobs:
   build-storybook:
     needs: [tests, type-check]
     uses: ./.github/workflows/build-storybook.yml
+    with:
+      artifact-name: "storybook-${{ github.head_ref }}"

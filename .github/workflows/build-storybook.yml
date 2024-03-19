@@ -1,9 +1,21 @@
 name: 'Build Storybook'
 
-on: [workflow_call, workflow_dispatch]
+on:
+  workflow_call:
+    inputs:
+      artifact-name:
+        description: name of the artifact to be pushed
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      artifact-name:
+        description: name of the artifact to be pushed
+        required: false
+        type: string
 
 env:
-  ARTIFACT_NAME: "storybook-${{ github.head_ref }}"
+  ARTIFACT_NAME: ${{ inputs.artifact-name || format('storybook-{0}', github.sha) }}
 
 jobs:
   build:
