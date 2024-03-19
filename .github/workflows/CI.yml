@@ -10,6 +10,8 @@ jobs:
   build:
     needs: [tests, type-check]
     uses: ./.github/workflows/build.yml
+    with:
+      artifact-name: "lib-${{ github.head_ref }}"
   build-storybook:
     needs: [tests, type-check]
     uses: ./.github/workflows/build-storybook.yml
