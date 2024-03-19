@@ -21,6 +21,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: storybook-${{ github.sha }}
+          # TODO (GAFI 19-03-2024): Add variable for this to avoid using ref when not provided
+          name: storybook-${{ github.head_ref }}
           path: ./storybook-static
           if-no-files-found: error

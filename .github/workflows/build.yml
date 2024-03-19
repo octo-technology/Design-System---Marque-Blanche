@@ -21,6 +21,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: lib-${{ github.sha }}
+          # TODO (GAFI 19-03-2024): Add variable for this to avoid using ref when not provided
+          name: lib-${{ github.head_ref }}
           path: ./dist
           if-no-files-found: error
