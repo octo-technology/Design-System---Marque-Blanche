@@ -34,9 +34,7 @@ jobs:
       - name: Build
         run: npm run storybook:build
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          # TODO (GAFI 19-03-2024): Add variable for this to avoid using ref when not provided
           name: ${{ env.ARTIFACT_NAME }}
           path: ./storybook-static
-          if-no-files-found: error
