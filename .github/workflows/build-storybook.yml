@@ -2,6 +2,9 @@ name: 'Build Storybook'
 
 on: [workflow_call, workflow_dispatch]
 
+env:
+  ARTIFACT_NAME: "storybook-${{ github.head_ref }}"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,6 +25,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           # TODO (GAFI 19-03-2024): Add variable for this to avoid using ref when not provided
-          name: storybook-${{ github.head_ref }}
+          name: ${{ env.ARTIFACT_NAME }}
           path: ./storybook-static
           if-no-files-found: error
