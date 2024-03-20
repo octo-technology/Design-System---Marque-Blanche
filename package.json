@@ -1,12 +1,12 @@
 {
-  "name": "design-system-marque-blanche",
+  "name": "@octo-technology/dsocto",
   "version": "1.0.0",
-  "main": "./dist/design-system-marque-blanche.cjs",
-  "module": "./dist/design-system-marque-blanche.js",
+  "main": "./dist/dsocto.cjs",
+  "module": "./dist/dsocto.js",
   "exports": {
     ".": {
-      "import": "./dist/design-system-marque-blanche.js",
-      "require": "./dist/design-system-marque-blanche.cjs"
+      "import": "./dist/dsocto.js",
+      "require": "./dist/dsocto.cjs"
     }
   },
   "type": "module",

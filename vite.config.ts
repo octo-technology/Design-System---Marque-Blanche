@@ -11,8 +11,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
-      name: 'design-system-marque-blanche',
-      fileName: 'design-system-marque-blanche'
+      name: 'dsocto',
+      fileName: 'dsocto'
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
