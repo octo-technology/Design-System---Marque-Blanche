@@ -24,9 +24,9 @@ jobs:
     needs: build-storybook
     uses: ./.github/workflows/deploy-storybook.yml
     with:
-      artifact_name: "storybook-latest"
+      artifact-name: "storybook-latest"
   publish-package:
     needs: build
     uses: ./.github/workflows/publish-package.yml
     with:
-      package-name: "lib-latest"
+      artifact-name: "lib-latest"
