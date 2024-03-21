@@ -37,26 +37,6 @@ jobs:
           artifact_name: "storybook-latest"
   publish-package:
     needs: build
-    permissions:
-      packages: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          #         TODO: add version to a .nvmrc or at least a variable
-          node-version: 18.12.1
-          cache: npm
-          registry-url: 'https://npm.pkg.github.com'
-      - name: Install
-        run: npm ci --omit=dev --prefer-offline
-      - name: Download dist
-        uses: actions/download-artifact@v4
-        with:
-          name: "lib-latest"
-          path: "./dist"
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    uses: ./.github/workflows/publish-package.yml
+    with:
+      package-name: "lib-latest"
