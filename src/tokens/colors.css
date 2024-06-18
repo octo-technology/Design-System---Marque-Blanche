@@ -35,6 +35,15 @@
     --color-navy-200: #9999CAFF;
     --color-navy-100: #CCCCE4FF;
     --color-navy-050: #E6E6F2FF;
+
+    /*TOKENS*/
+
+    --color-button-background-primary: var(--color-navy-500);
+    --color-button-border-primary: var(--color-navy-500);
+    --color-button-background-primary-hover: var(--color-navy-700);
+    --color-button-border-primary-hover:var(--color-navy-700);
+
+
 }
 
 

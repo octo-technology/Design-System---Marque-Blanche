@@ -1,3 +1,23 @@
+button {
+  background-color:var(--color-button-background-primary);
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 1px solid var(--color-button-border-primary);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color:  var(--color-button-background-primary-hover);
+  border-color: var(--color-button-border-primary-hover);
+  box-shadow: 4px 8px 8px 2px #1F3A934D;
+}
+
+button:active {
+  box-shadow: 0px 2px 3px 1px rgba(1, 1, 122, 0.6);
+}
+
 .storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -7,9 +27,15 @@
   display: inline-block;
   line-height: 1;
 }
+
+/*BUTTON TYPES*/
+
 .storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 16px;
 }
 .storybook-button--secondary {
   color: #333;

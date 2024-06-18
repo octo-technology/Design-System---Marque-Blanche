@@ -10,6 +10,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: ['small', 'medium', 'large'] },
+    type: { options: ['primary', 'seondary', 'destructive'] },
     backgroundColor: { control: 'color' },
   },
   args: {
@@ -28,14 +29,14 @@ type Story = StoryObj<typeof meta>;
  */
 export const Primary: Story = {
   args: {
-    primary: true,
+    type: 'primary',
     label: 'Button',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    primary: false,
+    type: 'secondary',
     label: 'Button',
   },
 };
