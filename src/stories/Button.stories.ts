@@ -41,6 +41,14 @@ export const Secondary: Story = {
   },
 };
 
+export const Destructive: Story = {
+  args: {
+    type: 'destructive',
+    label: 'Button',
+  },
+};
+
+
 export const Large: Story = {
   args: {
     label: 'Button',
@@ -54,3 +62,4 @@ export const Small: Story = {
     size: 'small',
   },
 };
+

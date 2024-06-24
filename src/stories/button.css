@@ -42,6 +42,20 @@
 }
 
 /*DESTRUCTIVE*/
+.storybook-button--destructive {
+  background-color:#AE1813;
+  border: 1px solid #D91E18;
+  color: #FFF;
+}
+
+.storybook-button--destructive:hover {
+  background-color: #AE1813;
+  border-color: #AE1813;
+  box-shadow: 4px 8px 8px 2px #f1b0ae;
+
+}
+
+/* BUTTON SIZES*/
 
 .storybook-button--small {
   font-size: 12px;
