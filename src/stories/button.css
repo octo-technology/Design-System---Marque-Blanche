@@ -1,21 +1,72 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* Verifier la font family roboto au global */
+
+button {
   font-weight: 700;
-  border: 0;
-  border-radius: 3em;
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  transition:box-shadow 200ms ease-in-out;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
 }
+
+/*BUTTON TYPES*/
+
+/*PRIMARY*/
 .storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+  background-color:var(--color-button-background-primary);
+  border: 1px solid var(--color-button-border-primary);
+  color: var(--color-button-text-primary);
 }
+
+.storybook-button--primary:hover {
+  background-color:  var(--color-button-background-primary-hover);
+  border-color: var(--color-button-border-primary-hover);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary) r g b / 30%);
+}
+
+.storybook-button--primary:active {
+  background-color:var(--color-button-border-primary-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-active) r g b / 60%);
+}
+
+/*SECONDARY*/
 .storybook-button--secondary {
-  color: #333;
+  color: var(--color-button-text-secondary);
   background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  border: 1px solid var(--color-button-border-secondary);
 }
+
+.storybook-button--secondary:hover {
+  border: 2px solid var(--color-button-border-secondary-hover);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-secondary) r g b / 30%);
+  color:var(--color-button-text-secondary-hover);
+}
+
+.storybook-button--secondary:active {
+  color: var(--color-button-text-secondary);
+  border: 2px solid var(--color-button-border-secondary-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-secondary-active) r g b / 60%);
+}
+
+/*DESTRUCTIVE*/
+.storybook-button--destructive {
+  background-color:var(--color-button-background-destructive);
+  border: 1px solid var(--color-button-border-destructive);
+  color: var(--color-button-text-destructive);
+}
+
+.storybook-button--destructive:hover {
+  background-color: var(--color-button-background-destructive);
+  border-color: var(--color-button-shadow-destructive);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-destructive) r g b / 30%);
+}
+
+.storybook-button--destructive:active {
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-destructive-active) r g b / 60%);
+}
+
+/* BUTTON SIZES*/
+
 .storybook-button--small {
   font-size: 12px;
   padding: 10px 16px;

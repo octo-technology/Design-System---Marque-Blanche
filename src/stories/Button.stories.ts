@@ -10,10 +10,9 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: ['small', 'medium', 'large'] },
-    backgroundColor: { control: 'color' },
+    type: { options: ['primary', 'secondary', 'destructive'] },
   },
   args: {
-    primary: false,
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     onClick: fn(),
   },
@@ -28,17 +27,25 @@ type Story = StoryObj<typeof meta>;
  */
 export const Primary: Story = {
   args: {
-    primary: true,
+    type: 'primary',
     label: 'Button',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    primary: false,
+    type: 'secondary',
     label: 'Button',
   },
 };
+
+export const Destructive: Story = {
+  args: {
+    type: 'destructive',
+    label: 'Button',
+  },
+};
+
 
 export const Large: Story = {
   args: {
@@ -53,3 +60,4 @@ export const Small: Story = {
     size: 'small',
   },
 };
+
