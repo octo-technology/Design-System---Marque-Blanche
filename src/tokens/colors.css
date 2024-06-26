@@ -36,16 +36,44 @@
     --color-navy-100: #CCCCE4FF;
     --color-navy-050: #E6E6F2FF;
 
+
+    /*RED*/
+    --color-red-900: #2B0605FF;
+    --color-red-800: #570C0AFF;
+    --color-red-700: #82120EFF;
+    --color-red-600: #AE1813FF;
+    --color-red-500: #D91E18FF;
+    --color-red-400: #E14B46FF;
+    --color-red-300: #E87874FF;
+    --color-red-200: #F0A5A3FF;
+    --color-red-100: #F7D2D1FF;
+    --color-red-050: #FBE9E8FF;
+
     /*TOKENS*/
 
+    --color-button-text-primary: white;
     --color-button-background-primary: var(--color-navy-500);
-    --color-button-border-primary: var(--color-navy-500);
     --color-button-background-primary-hover: var(--color-navy-700);
+    --color-button-border-primary: var(--color-navy-500);
+    --color-button-border-primary-active: var(--color-navy-500);
     --color-button-border-primary-hover:var(--color-navy-700);
+    --color-button-shadow-primary: var(--color-blue-500);
+    --color-button-shadow-primary-active: var(--color-navy-500);
+
+    --color-button-text-secondary:var(--color-navy-500);
+    --color-button-text-secondary-hover:var(--color-navy-700);
     --color-button-border-secondary:var(--color-navy-500);
     --color-button-border-secondary-hover:var(--color-navy-700);
+    --color-button-border-secondary-active:var(--color-navy-500);
+    --color-button-shadow-secondary: var(--color-blue-500);
+    --color-button-shadow-secondary-active: var(--color-navy-500);
 
 
+    --color-button-text-destructive:#FFF;
+    --color-button-background-destructive:var(--color-red-600);
+    --color-button-border-destructive:var(--color-red-500);
+    --color-button-shadow-destructive:var(--color-red-200);
+/*TODO* variablisier les couleurs primary*/
 }
 
 

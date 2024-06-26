@@ -1,8 +1,9 @@
 /* Verifier la font family roboto au global */
 
-.storybook-button {
+button {
   font-weight: 700;
   cursor: pointer;
+  transition:box-shadow 200ms ease-in-out;
   padding: 12px 24px;
   border-radius: 24px;
   font-size: 16px;
@@ -14,45 +15,56 @@
 .storybook-button--primary {
   background-color:var(--color-button-background-primary);
   border: 1px solid var(--color-button-border-primary);
-  color: #FFF;
+  color: var(--color-button-text-primary);
 }
 
 .storybook-button--primary:hover {
   background-color:  var(--color-button-background-primary-hover);
   border-color: var(--color-button-border-primary-hover);
-  box-shadow: 4px 8px 8px 2px #1F3A934D;
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary) r g b / 30%);
 }
 
 .storybook-button--primary:active {
-  box-shadow: 0px 2px 3px 1px rgba(1, 1, 122, 0.6);
+  background-color:var(--color-button-border-primary-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-active) r g b / 60%);
 }
 
 /*SECONDARY*/
 .storybook-button--secondary {
-  color: #333;
+  color: var(--color-button-text-secondary);
   background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   border: 1px solid var(--color-button-border-secondary);
 }
 
 .storybook-button--secondary:hover {
-  border: 4px solid var(--color-button-border-secondary-hover);
-  box-shadow: 4px 8px 8px 2px #1F3A934D;
+  border: 2px solid var(--color-button-border-secondary-hover);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary) r g b / 30%);
+  color:var(--color-button-text-secondary-hover);
+}
 
+.storybook-button--secondary:active {
+  color: var(--color-button-text-secondary);
+  border: 2px solid var(--color-button-border-secondary-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-secondary-active) r g b / 60%);
 }
 
 /*DESTRUCTIVE*/
 .storybook-button--destructive {
-  background-color:#AE1813;
-  border: 1px solid #D91E18;
+  background-color:var(--color-button-background-destructive);
+  border: 1px solid var(--color-button-border-destructive);
   color: #FFF;
 }
 
 .storybook-button--destructive:hover {
-  background-color: #AE1813;
-  border-color: #AE1813;
-  box-shadow: 4px 8px 8px 2px #f1b0ae;
+  background-color: var(--color-button-background-destructive);
+  border-color: var(--color-button-background-destructive);
+  box-shadow: 2px 4px 7px 2px var(--color-button-shadow-destructive);
+  /*remplacer par des tokens de couleurs pour la shadow ou pas ?*/
+}
 
+.storybook-button--destructive:active {
+  box-shadow: 0px 2px 3px 1px rgba(241, 176, 174);
+  /*remplacer par des tokens pour la shadow ou pas ?*/
 }
 
 /* BUTTON SIZES*/
