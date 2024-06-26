@@ -69,10 +69,11 @@
     --color-button-shadow-secondary-active: var(--color-navy-500);
 
 
-    --color-button-text-destructive:#FFF;
+    --color-button-text-destructive: white;
     --color-button-background-destructive:var(--color-red-600);
     --color-button-border-destructive:var(--color-red-500);
-    --color-button-shadow-destructive:var(--color-red-200);
+    --color-button-shadow-destructive:var(--color-red-500);
+    --color-button-shadow-destructive-active:var(--color-red-200);
 /*TODO* variablisier les couleurs primary*/
 }
 

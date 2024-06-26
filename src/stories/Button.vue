@@ -2,7 +2,7 @@
   <button type="button" :class="classes" @click="onClick" >{{ label }} </button>
 </template>
 
-<script lang="ts"setup>
+<script lang="ts" setup>
 
 import { computed } from 'vue';
 import "@/tokens/colors.css";
@@ -15,9 +15,9 @@ type ButtonProps = {
    */
   label: string,
   /**
-   * type of the button
+   * Button type
    */
-  type ?: 'primary'| 'secondary' | 'destructive',
+  type?: 'primary'| 'secondary' | 'destructive',
 
   /**
    * size of the button

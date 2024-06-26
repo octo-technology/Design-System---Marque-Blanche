@@ -38,7 +38,7 @@ button {
 
 .storybook-button--secondary:hover {
   border: 2px solid var(--color-button-border-secondary-hover);
-  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary) r g b / 30%);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-secondary) r g b / 30%);
   color:var(--color-button-text-secondary-hover);
 }
 
@@ -52,19 +52,17 @@ button {
 .storybook-button--destructive {
   background-color:var(--color-button-background-destructive);
   border: 1px solid var(--color-button-border-destructive);
-  color: #FFF;
+  color: var(--color-button-text-destructive);
 }
 
 .storybook-button--destructive:hover {
   background-color: var(--color-button-background-destructive);
-  border-color: var(--color-button-background-destructive);
-  box-shadow: 2px 4px 7px 2px var(--color-button-shadow-destructive);
-  /*remplacer par des tokens de couleurs pour la shadow ou pas ?*/
+  border-color: var(--color-button-shadow-destructive);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-destructive) r g b / 30%);
 }
 
 .storybook-button--destructive:active {
-  box-shadow: 0px 2px 3px 1px rgba(241, 176, 174);
-  /*remplacer par des tokens pour la shadow ou pas ?*/
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-destructive-active) r g b / 60%);
 }
 
 /* BUTTON SIZES*/
