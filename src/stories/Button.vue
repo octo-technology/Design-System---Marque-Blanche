@@ -46,4 +46,5 @@ const onClick = () => {
 };
 
 </script>
+<style src="src/assets/main.css" lang="css"/>
 

@@ -49,32 +49,39 @@
     --color-red-100: #F7D2D1FF;
     --color-red-050: #FBE9E8FF;
 
+
+    /*COLORS VARIABLES*/
+    --navy-primary:var(--color-navy-500);
+    --navy-primary-variant:var(--color-navy-700);
+    --red-primary: var(--color-red-500);
+    --red-primary-variant: var(--color-red-600);
+
     /*TOKENS*/
 
     --color-button-text-primary: white;
-    --color-button-background-primary: var(--color-navy-500);
-    --color-button-background-primary-hover: var(--color-navy-700);
-    --color-button-border-primary: var(--color-navy-500);
-    --color-button-border-primary-active: var(--color-navy-500);
-    --color-button-border-primary-hover:var(--color-navy-700);
+    --color-button-background-primary: var( --navy-primary);
+    --color-button-background-primary-hover: var(--navy-primary-variant);
+    --color-button-border-primary: var( --navy-primary);
+    --color-button-border-primary-active: var( --navy-primary);
+    --color-button-border-primary-hover:var(--navy-primary-variant);
     --color-button-shadow-primary: var(--color-blue-500);
-    --color-button-shadow-primary-active: var(--color-navy-500);
+    --color-button-shadow-primary-active: var( --navy-primary);
 
-    --color-button-text-secondary:var(--color-navy-500);
-    --color-button-text-secondary-hover:var(--color-navy-700);
-    --color-button-border-secondary:var(--color-navy-500);
-    --color-button-border-secondary-hover:var(--color-navy-700);
-    --color-button-border-secondary-active:var(--color-navy-500);
+    --color-button-text-secondary:var(--navy-primary);
+    --color-button-text-secondary-hover:var(--navy-primary-variant);
+    --color-button-border-secondary:var(--navy-primary);
+    --color-button-border-secondary-hover:var(--navy-primary-variant);
+    --color-button-border-secondary-active:var(--navy-primary);
     --color-button-shadow-secondary: var(--color-blue-500);
-    --color-button-shadow-secondary-active: var(--color-navy-500);
+    --color-button-shadow-secondary-active: var(--navy-primary);
 
 
     --color-button-text-destructive: white;
-    --color-button-background-destructive:var(--color-red-600);
-    --color-button-border-destructive:var(--color-red-500);
-    --color-button-shadow-destructive:var(--color-red-500);
+    --color-button-background-destructive:var(--red-primary-variant);
+    --color-button-border-destructive:var(--red-primary);
+    --color-button-shadow-destructive:var(--red-primary);
     --color-button-shadow-destructive-active:var(--color-red-200);
-/*TODO* variablisier les couleurs primary*/
+
 }
 
 
