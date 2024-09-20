@@ -51,22 +51,22 @@
 
     /*TOKENS*/
 
-    --color-button-text-primary: white;
-    --color-button-background-primary: var(--color-navy-500);
-    --color-button-background-primary-hover: var(--color-navy-700);
-    --color-button-border-primary: var(--color-navy-500);
-    --color-button-border-primary-active: var(--color-navy-500);
-    --color-button-border-primary-hover:var(--color-navy-700);
-    --color-button-shadow-primary: var(--color-blue-500);
-    --color-button-shadow-primary-active: var(--color-navy-500);
+    --color-button-text-primary-contained: white;
+    --color-button-background-primary-contained: var(--color-navy-500);
+    --color-button-background-primary-contained-hover: var(--color-navy-700);
+    --color-button-border-primary-contained: var(--color-navy-500);
+    --color-button-border-primary-contained-active: var(--color-navy-500);
+    --color-button-border-primary-contained-hover:var(--color-navy-700);
+    --color-button-shadow-primary-contained: var(--color-blue-500);
+    --color-button-shadow-primary-contained-active: var(--color-navy-500);
 
-    --color-button-text-secondary:var(--color-navy-500);
-    --color-button-text-secondary-hover:var(--color-navy-700);
-    --color-button-border-secondary:var(--color-navy-500);
-    --color-button-border-secondary-hover:var(--color-navy-700);
-    --color-button-border-secondary-active:var(--color-navy-500);
-    --color-button-shadow-secondary: var(--color-blue-500);
-    --color-button-shadow-secondary-active: var(--color-navy-500);
+    --color-button-text-primary-outlined:var(--color-navy-500);
+    --color-button-text-primary-outlined-hover:var(--color-navy-700);
+    --color-button-border-primary-outlined:var(--color-navy-500);
+    --color-button-border-primary-outlined-hover:var(--color-navy-700);
+    --color-button-border-primary-outlined-active:var(--color-navy-500);
+    --color-button-shadow-primary-outlined: var(--color-blue-500);
+    --color-button-shadow-primary-outlined-active: var(--color-navy-500);
 
 
     --color-button-text-destructive: white;

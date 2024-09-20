@@ -17,7 +17,12 @@ type ButtonProps = {
   /**
    * Button type
    */
-  type?: 'primary'| 'secondary' | 'destructive',
+  type?: 'primary' | 'destructive',
+
+  /**
+   * Button variant
+   */
+  variant?: 'contained' | 'outlined' | 'subtle'
 
   /**
    * size of the button
@@ -28,6 +33,7 @@ type ButtonProps = {
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   type:'primary',
+  variant:'contained',
   size:'medium',
 });
 
@@ -37,7 +43,7 @@ const emit = defineEmits<{
 
 const classes = computed(() => ({
   'storybook-button': true,
-  [`storybook-button--${props.type || 'primary'}`]: true,
+  [`storybook-button--${props.type || 'primary'}-${props.variant || 'contained'}`]: true,
   [`storybook-button--${props.size || 'medium'}`]: true,
 }));
 

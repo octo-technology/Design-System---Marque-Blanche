@@ -12,56 +12,56 @@ button {
 /*BUTTON TYPES*/
 
 /*PRIMARY*/
-.storybook-button--primary {
-  background-color:var(--color-button-background-primary);
-  border: 1px solid var(--color-button-border-primary);
-  color: var(--color-button-text-primary);
+.storybook-button--primary-contained{
+  background-color:var(--color-button-background-primary-contained);
+  border: 1px solid var(--color-button-border-primary-contained);
+  color: var(--color-button-text-primary-contained);
 }
 
-.storybook-button--primary:hover {
-  background-color:  var(--color-button-background-primary-hover);
-  border-color: var(--color-button-border-primary-hover);
-  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary) r g b / 30%);
+.storybook-button--primary-contained:hover {
+  background-color:  var(--color-button-background-primary-contained-hover);
+  border-color: var(--color-button-border-primary-contained-hover);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary-contained) r g b / 30%);
 }
 
-.storybook-button--primary:active {
-  background-color:var(--color-button-border-primary-active);
-  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-active) r g b / 60%);
+.storybook-button--primary-contained:active {
+  background-color:var(--color-button-border-primary-contained-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-contained-active) r g b / 60%);
 }
 
-/*SECONDARY*/
-.storybook-button--secondary {
-  color: var(--color-button-text-secondary);
+.storybook-button--primary-outlined {
+  color: var(--color-button-text-primary-outlined);
   background-color: transparent;
-  border: 1px solid var(--color-button-border-secondary);
+  border: 1px solid var(--color-button-border-primary-outlined);
 }
 
-.storybook-button--secondary:hover {
-  border: 2px solid var(--color-button-border-secondary-hover);
-  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-secondary) r g b / 30%);
-  color:var(--color-button-text-secondary-hover);
+.storybook-button--primary-outlined:hover {
+  border: 2px solid var(--color-button-border-primary-outlined-hover);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary-outlined) r g b / 30%);
+  color:var(--color-button-text-primary-outlined-hover);
 }
 
-.storybook-button--secondary:active {
-  color: var(--color-button-text-secondary);
-  border: 2px solid var(--color-button-border-secondary-active);
-  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-secondary-active) r g b / 60%);
+.storybook-button--primary-outlined:active {
+  color: var(--color-button-text-primary-outlined);
+  border: 2px solid var(--color-button-border-primary-outlined-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-outlined-active) r g b / 60%);
 }
+
 
 /*DESTRUCTIVE*/
-.storybook-button--destructive {
+.storybook-button--destructive-contained {
   background-color:var(--color-button-background-destructive);
   border: 1px solid var(--color-button-border-destructive);
   color: var(--color-button-text-destructive);
 }
 
-.storybook-button--destructive:hover {
+.storybook-button--destructive-contained:hover {
   background-color: var(--color-button-background-destructive);
   border-color: var(--color-button-shadow-destructive);
   box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-destructive) r g b / 30%);
 }
 
-.storybook-button--destructive:active {
+.storybook-button--destructive-contained:active {
   box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-destructive-active) r g b / 60%);
 }
 
