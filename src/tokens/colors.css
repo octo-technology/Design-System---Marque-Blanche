@@ -54,6 +54,9 @@
     --color-white-100: #E2E4E7;
     --color-white-200: #A7AFB8;
     --color-white-300: #8995A1;
+    --color-white-500: #414952;
+    --color-white-900: #16181B;
+
     /*TOKENS*/
 
     --color-button-text-primary-contained: white;
@@ -90,14 +93,19 @@
     --color-button-border-primary-subtle-active:var(--color-navy-500);
     --color-button-text-primary-subtle-disabled: var(--color-white-300);
 
+    --color-button-text-destructive-contained: white;
+    --color-button-background-destructive-contained:var(--color-red-600);
+    --color-button-border-destructive-contained:var(--color-red-500);
+    --color-button-shadow-destructive-contained:var(--color-red-500);
+    --color-button-shadow-destructive-contained-active:var(--color-red-200);
 
+    --color-button-text-destructive-subtle:var(--color-white-500);
+    --color-button-text-destructive-subtle-hover:var(--color-blue-800);
+    --color-button-background-destructive-subtle-hover:var(--color-navy-050);
+    --color-button-text-destructive-subtle-active: white;
+    --color-button-background-destructive-subtle-active:var(--color-white-900);
+    --color-button-text-destructive-subtle-disabled: var(--color-white-300);
 
-    --color-button-text-destructive: white;
-    --color-button-background-destructive:var(--color-red-600);
-    --color-button-border-destructive:var(--color-red-500);
-    --color-button-shadow-destructive:var(--color-red-500);
-    --color-button-shadow-destructive-active:var(--color-red-200);
-/*TODO* variablisier les couleurs primary*/
 }
 
 

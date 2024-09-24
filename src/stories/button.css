@@ -117,21 +117,54 @@ button {
 }
 
 
-/*DESTRUCTIVE*/
+/* DESTRUCTIVE CONTAINED */
 .storybook-button--destructive-contained {
-  background-color:var(--color-button-background-destructive);
-  border: 1px solid var(--color-button-border-destructive);
-  color: var(--color-button-text-destructive);
+  background-color:var(--color-button-background-destructive-contained);
+  border: 1px solid var(--color-button-border-destructive-contained);
+  color: var(--color-button-text-destructive-contained);
 }
 
 .storybook-button--destructive-contained:hover {
-  background-color: var(--color-button-background-destructive);
-  border-color: var(--color-button-shadow-destructive);
-  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-destructive) r g b / 30%);
+  background-color: var(--color-button-background-destructive-contained);
+  border-color: var(--color-button-shadow-destructive-contained);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-destructive-contained) r g b / 30%);
 }
 
 .storybook-button--destructive-contained:active {
-  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-destructive-active) r g b / 60%);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-destructive-contained-active) r g b / 60%);
+}
+
+/* DESTRUCTIVE SUBTLE */
+
+.storybook-button--destructive-subtle {
+  color: var(--color-button-text-destructive-subtle);
+  background-color: transparent;
+  border: none;
+}
+
+.storybook-button--destructive-subtle:hover {
+  color: var(--color-button-text-destructive-subtle-hover);
+  background-color:var(--color-button-background-destructive-subtle-hover);
+  border: none;
+}
+
+.storybook-button--destructive-subtle:active {
+  color: var(--color-button-text-destructive-subtle-active);
+  background-color:var(--color-button-background-destructive-subtle-active);
+}
+
+.storybook-button--destructive-subtle[disabled] {
+  background-color: transparent;
+  border: none;
+  color: var(--color-button-text-destructive-subtle-disabled);
+}
+
+.storybook-button--destructive-subtle:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--destructive-subtle:active[disabled] {
+  box-shadow: none;
 }
 
 /* BUTTON SIZES*/
