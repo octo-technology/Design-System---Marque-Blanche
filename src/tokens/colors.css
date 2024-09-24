@@ -49,24 +49,47 @@
     --color-red-100: #F7D2D1FF;
     --color-red-050: #FBE9E8FF;
 
+    /* WHITE */
+    --color-white-050: #F5F5F5;
+    --color-white-100: #E2E4E7;
+    --color-white-200: #A7AFB8;
+    --color-white-300: #8995A1;
     /*TOKENS*/
 
     --color-button-text-primary-contained: white;
     --color-button-background-primary-contained: var(--color-navy-500);
-    --color-button-background-primary-contained-hover: var(--color-navy-700);
     --color-button-border-primary-contained: var(--color-navy-500);
-    --color-button-border-primary-contained-active: var(--color-navy-500);
-    --color-button-border-primary-contained-hover:var(--color-navy-700);
     --color-button-shadow-primary-contained: var(--color-blue-500);
+    --color-button-background-primary-contained-hover: var(--color-navy-700);
+    --color-button-border-primary-contained-hover:var(--color-navy-700);
+    --color-button-border-primary-contained-active: var(--color-navy-500);
     --color-button-shadow-primary-contained-active: var(--color-navy-500);
+    --color-button-background-primary-contained-disabled: var(--color-white-100);
+    --color-button-border-primary-contained-disabled: var(--color-white-100);
+    --color-button-text-primary-contained-disabled: var(--color-white-300);
 
     --color-button-text-primary-outlined:var(--color-navy-500);
-    --color-button-text-primary-outlined-hover:var(--color-navy-700);
+    --color-button-background-primary-outlined: var(--color-white-050);
     --color-button-border-primary-outlined:var(--color-navy-500);
-    --color-button-border-primary-outlined-hover:var(--color-navy-700);
-    --color-button-border-primary-outlined-active:var(--color-navy-500);
     --color-button-shadow-primary-outlined: var(--color-blue-500);
+    --color-button-text-primary-outlined-hover:var(--color-navy-700);
+    --color-button-background-primary-outlined-hover: var(--color-white-050);
+    --color-button-border-primary-outlined-hover:var(--color-navy-700);
+    --color-button-background-primary-outlined-active: var(--color-white-050);
+    --color-button-border-primary-outlined-active:var(--color-navy-500);
     --color-button-shadow-primary-outlined-active: var(--color-navy-500);
+    --color-button-background-primary-outlined-disabled: var(--color-white-050);
+    --color-button-border-primary-outlined-disabled: var(--color-white-200);
+    --color-button-text-primary-outlined-disabled: var(--color-white-300);
+
+    --color-button-text-primary-subtle:var(--color-navy-500);
+    --color-button-text-primary-subtle-hover:var(--color-navy-700);
+    --color-button-background-primary-subtle-hover:var(--color-navy-050);
+    --color-button-text-primary-subtle-active: white;
+    --color-button-background-primary-subtle-active:var(--color-navy-500);
+    --color-button-border-primary-subtle-active:var(--color-navy-500);
+    --color-button-text-primary-subtle-disabled: var(--color-white-300);
+
 
 
     --color-button-text-destructive: white;

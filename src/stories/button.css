@@ -11,7 +11,9 @@ button {
 
 /*BUTTON TYPES*/
 
-/*PRIMARY*/
+/*PRIMARY CONTAINED*/
+
+
 .storybook-button--primary-contained{
   background-color:var(--color-button-background-primary-contained);
   border: 1px solid var(--color-button-border-primary-contained);
@@ -29,22 +31,89 @@ button {
   box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-contained-active) r g b / 60%);
 }
 
+.storybook-button--primary-contained[disabled] {
+  background-color: var(--color-button-background-primary-contained-disabled);
+  border: 1px solid var(--color-button-border-primary-contained-disabled);
+  color: var(--color-button-text-primary-contained-disabled);
+}
+
+.storybook-button--primary-contained:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--primary-contained:active[disabled] {
+  box-shadow: none;
+}
+
+/*PRIMARY OUTLINED*/
+
+
 .storybook-button--primary-outlined {
   color: var(--color-button-text-primary-outlined);
-  background-color: transparent;
+  background-color: var(--color-button-background-primary-outlined);
   border: 1px solid var(--color-button-border-primary-outlined);
 }
 
 .storybook-button--primary-outlined:hover {
   border: 2px solid var(--color-button-border-primary-outlined-hover);
+  background-color: var(--color-button-background-primary-outlined-hover);
   box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary-outlined) r g b / 30%);
   color:var(--color-button-text-primary-outlined-hover);
 }
 
 .storybook-button--primary-outlined:active {
   color: var(--color-button-text-primary-outlined);
+  background-color: var(--color-button-background-primary-outlined-active);
   border: 2px solid var(--color-button-border-primary-outlined-active);
   box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-outlined-active) r g b / 60%);
+}
+
+.storybook-button--primary-outlined[disabled] {
+  background-color: var(--color-button-background-primary-outlined-disabled);
+  border: 1px solid var(--color-button-border-primary-outlined-disabled);
+  color: var(--color-button-text-primary-outlined-disabled);
+}
+
+.storybook-button--primary-outlined:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--primary-outlined:active[disabled] {
+  box-shadow: none;
+}
+
+/*PRIMARY SUBTLE*/
+
+.storybook-button--primary-subtle {
+  color: var(--color-button-text-primary-subtle);
+  background-color: transparent;
+  border: none;
+}
+
+.storybook-button--primary-subtle:hover {
+  color: var(--color-button-text-primary-subtle-hover);
+  background-color:var(--color-button-background-primary-subtle-hover);
+  border: none;
+}
+
+.storybook-button--primary-subtle:active {
+  color: var(--color-button-text-primary-subtle-active);
+  background-color:var(--color-button-background-primary-subtle-active);
+  border: 1px solid var(--color-button-border-primary-subtle-active);
+}
+
+.storybook-button--primary-subtle[disabled] {
+  background-color: transparent;
+  border: none;
+  color: var(--color-button-text-primary-subtle-disabled);
+}
+
+.storybook-button--primary-subtle:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--primary-subtle:active[disabled] {
+  box-shadow: none;
 }
 
 

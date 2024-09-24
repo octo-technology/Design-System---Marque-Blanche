@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" >{{ label }} </button>
+  <button type="button" :class="classes" @click="onClick" :disabled="disabled">{{ label }} </button>
 </template>
 
 <script lang="ts" setup>
@@ -7,7 +7,6 @@
 import { computed } from 'vue';
 import "@/tokens/colors.css";
 import "@/stories/button.css"
-
 
 type ButtonProps = {
   /**
@@ -29,6 +28,10 @@ type ButtonProps = {
    */
   size?: 'small' | 'medium' | 'large',
 
+  /**
+   * Button disabled state
+   */
+  disabled?: boolean
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
@@ -45,6 +48,7 @@ const classes = computed(() => ({
   'storybook-button': true,
   [`storybook-button--${props.type || 'primary'}-${props.variant || 'contained'}`]: true,
   [`storybook-button--${props.size || 'medium'}`]: true,
+
 }));
 
 const onClick = () => {
