@@ -1,5 +1,8 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :disabled="disabled">{{ label }} </button>
+  <button type="button" :class="classes" @click="onClick" :disabled="disabled">
+      {{ label.text }}
+      <i v-if="label.icon" :class="label.icon.name"></i>
+  </button>
 </template>
 
 <script lang="ts" setup>
@@ -7,12 +10,21 @@
 import { computed } from 'vue';
 import "@/tokens/colors.css";
 import "@/stories/button.css"
+import "@fortawesome/fontawesome-free/css/all.min.css"
+
+type Icon = {
+  name: string,
+  position: 'left' | 'right',
+}
 
 type ButtonProps = {
   /**
    * The label of the button
    */
-  label: string,
+  label: {
+    text: string,
+    icon?: Icon
+  },
   /**
    * Button type
    */
@@ -21,7 +33,7 @@ type ButtonProps = {
   /**
    * Button variant
    */
-  variant?: 'contained' | 'outlined' | 'subtle'
+  variant?: 'contained' | 'outlined' | 'subtle',
 
   /**
    * size of the button
@@ -48,6 +60,7 @@ const classes = computed(() => ({
   'storybook-button': true,
   [`storybook-button--${props.type || 'primary'}-${props.variant || 'contained'}`]: true,
   [`storybook-button--${props.size || 'medium'}`]: true,
+  [`storybook-button-icon--${props.label.icon?.position}`]: props.label.icon,
 
 }));
 

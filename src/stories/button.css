@@ -1,6 +1,9 @@
 /* Verifier la font family roboto au global */
 
 button {
+  display: flex;
+  gap: .25rem;
+  align-items: center;
   font-weight: 700;
   cursor: pointer;
   transition:box-shadow 200ms ease-in-out;
@@ -180,4 +183,12 @@ button {
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+}
+
+.storybook-button-icon--left{
+  flex-direction: row-reverse;
+}
+
+.storybook-button-icon--right{
+  flex-direction: row;
 }
