@@ -8,7 +8,6 @@ button {
   cursor: pointer;
   transition:box-shadow 200ms ease-in-out;
   padding: 12px 24px;
-  border-radius: 24px;
   font-size: 16px;
 }
 
@@ -170,19 +169,42 @@ button {
   box-shadow: none;
 }
 
+/* BUTTON SHAPE */
+
+.storybook-button--rounded{
+  border-radius: 2rem;
+}
+
+.storybook-button--squared{
+  border-radius: .5rem;
+}
+
 /* BUTTON SIZES*/
 
 .storybook-button--small {
   font-size: 12px;
   padding: 10px 16px;
+
+  &.storybook-button--icon-button{
+    padding: .75rem;
+  }
+
 }
 .storybook-button--medium {
   font-size: 14px;
   padding: 11px 20px;
+
+  &.storybook-button--icon-button{
+    padding: 1rem;
+  }
 }
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+
+  &.storybook-button--icon-button{
+    padding: 1.25rem;
+  }
 }
 
 .storybook-button-icon--left{

@@ -22,7 +22,7 @@ type ButtonProps = {
    * The label of the button
    */
   label: {
-    text: string,
+    text?: string,
     icon?: Icon
   },
   /**
@@ -41,6 +41,11 @@ type ButtonProps = {
   size?: 'small' | 'medium' | 'large',
 
   /**
+   * shape of the button
+   */
+  shape?: 'rounded' | 'squared',
+
+  /**
    * Button disabled state
    */
   disabled?: boolean
@@ -50,6 +55,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   type:'primary',
   variant:'contained',
   size:'medium',
+  shape: 'rounded'
 });
 
 const emit = defineEmits<{
@@ -58,8 +64,10 @@ const emit = defineEmits<{
 
 const classes = computed(() => ({
   'storybook-button': true,
-  [`storybook-button--${props.type || 'primary'}-${props.variant || 'contained'}`]: true,
-  [`storybook-button--${props.size || 'medium'}`]: true,
+  [`storybook-button--${props.type}-${props.variant}`]: true,
+  [`storybook-button--${props.size}`]: true,
+  [`storybook-button--${props.shape}`]: true,
+  [`storybook-button--icon-button`]: (props.label.icon && !props.label.text) ,
   [`storybook-button-icon--${props.label.icon?.position}`]: props.label.icon,
 
 }));
