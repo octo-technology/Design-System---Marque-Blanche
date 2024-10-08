@@ -1,21 +1,177 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* Verifier la font family roboto au global */
+
+button {
+  display: flex;
+  gap: .25rem;
+  align-items: center;
   font-weight: 700;
-  border: 0;
-  border-radius: 3em;
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  transition:box-shadow 200ms ease-in-out;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+
+/*BUTTON TYPES*/
+
+/*PRIMARY CONTAINED*/
+
+
+.storybook-button--primary-contained{
+  background-color:var(--color-button-background-primary-contained);
+  border: 1px solid var(--color-button-border-primary-contained);
+  color: var(--color-button-text-primary-contained);
 }
-.storybook-button--secondary {
-  color: #333;
+
+.storybook-button--primary-contained:hover {
+  background-color:  var(--color-button-background-primary-contained-hover);
+  border-color: var(--color-button-border-primary-contained-hover);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary-contained) r g b / 30%);
+}
+
+.storybook-button--primary-contained:active {
+  background-color:var(--color-button-border-primary-contained-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-contained-active) r g b / 60%);
+}
+
+.storybook-button--primary-contained[disabled] {
+  background-color: var(--color-button-background-primary-contained-disabled);
+  border: 1px solid var(--color-button-border-primary-contained-disabled);
+  color: var(--color-button-text-primary-contained-disabled);
+}
+
+.storybook-button--primary-contained:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--primary-contained:active[disabled] {
+  box-shadow: none;
+}
+
+/*PRIMARY OUTLINED*/
+
+
+.storybook-button--primary-outlined {
+  color: var(--color-button-text-primary-outlined);
+  background-color: var(--color-button-background-primary-outlined);
+  border: 1px solid var(--color-button-border-primary-outlined);
+}
+
+.storybook-button--primary-outlined:hover {
+  border: 2px solid var(--color-button-border-primary-outlined-hover);
+  background-color: var(--color-button-background-primary-outlined-hover);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-primary-outlined) r g b / 30%);
+  color:var(--color-button-text-primary-outlined-hover);
+}
+
+.storybook-button--primary-outlined:active {
+  color: var(--color-button-text-primary-outlined);
+  background-color: var(--color-button-background-primary-outlined-active);
+  border: 2px solid var(--color-button-border-primary-outlined-active);
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-primary-outlined-active) r g b / 60%);
+}
+
+.storybook-button--primary-outlined[disabled] {
+  background-color: var(--color-button-background-primary-outlined-disabled);
+  border: 1px solid var(--color-button-border-primary-outlined-disabled);
+  color: var(--color-button-text-primary-outlined-disabled);
+}
+
+.storybook-button--primary-outlined:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--primary-outlined:active[disabled] {
+  box-shadow: none;
+}
+
+/*PRIMARY SUBTLE*/
+
+.storybook-button--primary-subtle {
+  color: var(--color-button-text-primary-subtle);
   background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  border: none;
 }
+
+.storybook-button--primary-subtle:hover {
+  color: var(--color-button-text-primary-subtle-hover);
+  background-color:var(--color-button-background-primary-subtle-hover);
+  border: none;
+}
+
+.storybook-button--primary-subtle:active {
+  color: var(--color-button-text-primary-subtle-active);
+  background-color:var(--color-button-background-primary-subtle-active);
+  border: 1px solid var(--color-button-border-primary-subtle-active);
+}
+
+.storybook-button--primary-subtle[disabled] {
+  background-color: transparent;
+  border: none;
+  color: var(--color-button-text-primary-subtle-disabled);
+}
+
+.storybook-button--primary-subtle:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--primary-subtle:active[disabled] {
+  box-shadow: none;
+}
+
+
+/* DESTRUCTIVE CONTAINED */
+.storybook-button--destructive-contained {
+  background-color:var(--color-button-background-destructive-contained);
+  border: 1px solid var(--color-button-border-destructive-contained);
+  color: var(--color-button-text-destructive-contained);
+}
+
+.storybook-button--destructive-contained:hover {
+  background-color: var(--color-button-background-destructive-contained);
+  border-color: var(--color-button-shadow-destructive-contained);
+  box-shadow: 2px 4px 7px 2px rgb(from var(--color-button-shadow-destructive-contained) r g b / 30%);
+}
+
+.storybook-button--destructive-contained:active {
+  box-shadow: 0px 2px 3px 1px rgb(from var(--color-button-shadow-destructive-contained-active) r g b / 60%);
+}
+
+/* DESTRUCTIVE SUBTLE */
+
+.storybook-button--destructive-subtle {
+  color: var(--color-button-text-destructive-subtle);
+  background-color: transparent;
+  border: none;
+}
+
+.storybook-button--destructive-subtle:hover {
+  color: var(--color-button-text-destructive-subtle-hover);
+  background-color:var(--color-button-background-destructive-subtle-hover);
+  border: none;
+}
+
+.storybook-button--destructive-subtle:active {
+  color: var(--color-button-text-destructive-subtle-active);
+  background-color:var(--color-button-background-destructive-subtle-active);
+}
+
+.storybook-button--destructive-subtle[disabled] {
+  background-color: transparent;
+  border: none;
+  color: var(--color-button-text-destructive-subtle-disabled);
+}
+
+.storybook-button--destructive-subtle:hover[disabled] {
+  box-shadow: none;
+}
+
+.storybook-button--destructive-subtle:active[disabled] {
+  box-shadow: none;
+}
+
+/* BUTTON SIZES*/
+
 .storybook-button--small {
   font-size: 12px;
   padding: 10px 16px;
@@ -27,4 +183,12 @@
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+}
+
+.storybook-button-icon--left{
+  flex-direction: row-reverse;
+}
+
+.storybook-button-icon--right{
+  flex-direction: row;
 }

@@ -10,10 +10,18 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: ['small', 'medium', 'large'] },
-    backgroundColor: { control: 'color' },
+    variant: { options: ['contained', 'outlined', 'subtle'] },
+    type: { options: ['primary', 'destructive'] },
+    label: {
+      options: ['Sans icone', 'Icone droite', 'Icone gauche'],
+      mapping: {
+          'Sans icone': { text: 'Button' },
+          'Icone droite': { text: 'Button', icon: { name: 'fa fa-smile', position: 'right' } },
+          'Icone gauche': { text: 'Button', icon: { name: 'fa fa-smile', position: 'left' } },
+      },
+    }
   },
   args: {
-    primary: false,
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     onClick: fn(),
   },
@@ -28,28 +36,38 @@ type Story = StoryObj<typeof meta>;
  */
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    type: 'primary',
+    label: {
+      text: 'Button'
+    },
   },
 };
 
-export const Secondary: Story = {
+export const Destructive: Story = {
   args: {
-    primary: false,
-    label: 'Button',
+    type: 'destructive',
+    label: {
+      text: 'Button'
+    },
   },
 };
+
 
 export const Large: Story = {
   args: {
-    label: 'Button',
+    label: {
+      text: 'Button'
+    },
     size: 'large',
   },
 };
 
 export const Small: Story = {
   args: {
-    label: 'Button',
+    label: {
+      text: 'Button'
+    },
     size: 'small',
   },
 };
+
