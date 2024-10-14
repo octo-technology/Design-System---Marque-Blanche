@@ -12,12 +12,14 @@ const meta = {
     size: { control: 'select', options: ['small', 'medium', 'large'] },
     variant: { options: ['contained', 'outlined', 'subtle'] },
     type: { options: ['primary', 'destructive'] },
+    shape: { options: ['rounded','squared'] },
     label: {
-      options: ['Sans icone', 'Icone droite', 'Icone gauche'],
+      options: ['Sans icône', 'Icône droite', 'Icône gauche', 'Icône seule'],
       mapping: {
-          'Sans icone': { text: 'Button' },
-          'Icone droite': { text: 'Button', icon: { name: 'fa fa-smile', position: 'right' } },
-          'Icone gauche': { text: 'Button', icon: { name: 'fa fa-smile', position: 'left' } },
+          'Sans icône': { text: 'Button' },
+          'Icône droite': { text: 'Button', icon: { name: 'fa fa-smile', position: 'right' } },
+          'Icône gauche': { text: 'Button', icon: { name: 'fa fa-smile', position: 'left' } },
+          'Icône seule': { icon: { name: 'fa fa-smile', position: 'left' }  },
       },
     }
   },
