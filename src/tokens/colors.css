@@ -24,6 +24,9 @@
     --color-cyan-100: #D2F4F8FF;
     --color-cyan-050: #E9FAFCFF;
 
+    /*GREEN*/
+    --color-green-700: #1E8549FF;
+
     /*NAVY*/
     --color-navy-900: #000018FF;
     --color-navy-800: #000031FF;
@@ -105,6 +108,12 @@
     --color-button-text-destructive-subtle-active: white;
     --color-button-background-destructive-subtle-active:var(--color-white-900);
     --color-button-text-destructive-subtle-disabled: var(--color-white-300);
+
+    --color-link-text-default: var(--color-navy-500);
+    --color-link-text-hover: var(--color-navy-700);
+    --color-link-background-hover: var(--color-navy-050);
+    --color-link-text-pressed: var(--color-navy-700);
+    --color-link-text-visited: var(--color-green-700);
 
 }
 

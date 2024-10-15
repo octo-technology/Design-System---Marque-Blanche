@@ -1,0 +1,22 @@
+.storybook-link{
+    color: var(--color-link-text-default);
+}
+
+.storybook-link:hover{
+    color: var(--color-link-text-hover);
+    background: var(--color-link-background-hover);
+}
+
+.storybook-link:visited{
+    color: var(--color-link-text-visited);
+}
+
+.storybook-link:active{
+    color: var(--color-link-text-pressed);
+}
+
+.storybook-link--external{
+    &::after{
+        content: ' \2750';
+    }
+}
